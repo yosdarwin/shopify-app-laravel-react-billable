@@ -1,6 +1,7 @@
 <?php
 
 use App\Exceptions\ShopifyProductCreatorException;
+use App\Http\Controllers\PlansController;
 use App\Lib\AuthRedirection;
 use App\Lib\EnsureBilling;
 use App\Lib\ProductCreator;
@@ -143,3 +144,18 @@ Route::post('/api/webhooks', function (Request $request) {
         return response()->json(['message' => "Got an exception when handling '$topic' webhook"], 500);
     }
 });
+
+// Add these routes for plan management
+Route::get('/plans/current', [PlansController::class, 'getCurrentPlan'])
+    ->middleware(['verify.shopify']);
+Route::get('/api/plans', function (Request $request) {
+    return app(App\Http\Controllers\PlansController::class)->getPlans();
+})->middleware('shopify.auth');
+
+Route::post('/api/plans/subscribe', function (Request $request) {
+    return app(App\Http\Controllers\PlansController::class)->subscribe($request);
+})->middleware('shopify.auth');
+
+Route::get('/api/plans/check', function (Request $request) {
+    return app(App\Http\Controllers\PlansController::class)->checkSubscription($request);
+})->middleware('shopify.auth');

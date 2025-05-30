@@ -3,7 +3,7 @@
 client_id = "850bbbdcfedab53698a535741cbad583"
 name = "mayos-app-premium"
 handle = "mayos-app-premium-1"
-application_url = "https://transcript-wake-butts-publicly.trycloudflare.com"
+application_url = "https://marijuana-span-lib-gave.trycloudflare.com"
 embedded = true
 
 [build]
@@ -19,9 +19,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://transcript-wake-butts-publicly.trycloudflare.com/auth/callback",
-  "https://transcript-wake-butts-publicly.trycloudflare.com/auth/shopify/callback",
-  "https://transcript-wake-butts-publicly.trycloudflare.com/api/auth/callback"
+  "https://marijuana-span-lib-gave.trycloudflare.com/auth/callback",
+  "https://marijuana-span-lib-gave.trycloudflare.com/auth/shopify/callback",
+  "https://marijuana-span-lib-gave.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
