@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "850bbbdcfedab53698a535741cbad583"
+name = "mayos-app-premium"
+handle = "mayos-app-premium-1"
+application_url = "https://transcript-wake-butts-publicly.trycloudflare.com"
+embedded = true
+
+[build]
+include_config_on_deploy = true
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2025-04"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://transcript-wake-butts-publicly.trycloudflare.com/auth/callback",
+  "https://transcript-wake-butts-publicly.trycloudflare.com/auth/shopify/callback",
+  "https://transcript-wake-butts-publicly.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
